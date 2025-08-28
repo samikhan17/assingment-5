@@ -6,9 +6,15 @@
     <title>Document</title>
     <!-- tailwind -->
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <!-- font awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<header class="max-w-[2000px] md:w-full mx-auto ">
+
+
+<body>
+
+    <header class="max-w-[2000px] md:w-full mx-auto ">
 
    
     <!-- nav bar -->
@@ -34,7 +40,7 @@
     </nav>
 
     <!-- green section -->
-     <div class="w-[90%] h-[100%] mx-auto mid:mx-none mid:h-60  bg-gradient-to-r from-[#013223] to-[#77ad9c] text-center justify-center mid:pt-10 sm:pt-o sm:w-[100%]">
+     <div class="w-[90%] h-[100%] mx-auto mid:mx-none mid:h-60  bg-gradient-to-r from-[#013223] via-[#5c726b] to-[#013223] text-center justify-center mid:pt-10 sm:pt-o sm:w-[100%]">
             <img class="w-24 h-24 mx-auto" src="./assets/logo-dark.png" alt="">
         <h1 class="font-extrabold text-[25px] text-white mt-3">Emergency Service Directory</h1>
         <p class="text-[17px] text-white py-2 w-[100%] md:mt-3">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
@@ -42,7 +48,195 @@
 
 </header>
 
-<body class="border-2 border-red-300">
+<main class="w-[90%] min-h-[200px] max-w-[2000px] md:w-full mx-auto bg-[#41ff6b1a] flex-row md:flex pl-7 pt-8">
+    <div class=" md:w-[1500px] min-h-36 grid grid-row-1  w-[90%] md:grid-cols-3 gap-8">
+        <div class="w-[90%] md:w-[430px] md:h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/emergency.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">National Emergency Number</h1>
+            <p class="font-light text-sm">National Emergency</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">999</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">All</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/police.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Police Helpline Number</h1>
+            <p class="font-light text-sm">Police</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">999</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">police</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/fire-service.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Fire Service Number</h1>
+            <p class="font-light text-sm">Fire Service</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">999</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Fire</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/ambulance.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Ambulance Service</h1>
+            <p class="font-light text-sm">Ambulance</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">1994-999999</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Health</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/emergency.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Women & Child Helpline</h1>
+            <p class="font-light text-sm">Women & Child Helpline</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">109</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Help</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/emergency.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Anti-Corruption Helpline</h1>
+            <p class="font-light text-sm">Anti-Corruption</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">106</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Govt.</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/emergency.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Electricity Helpline</h1>
+            <p class="font-light text-sm">Electricity Outage</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">16216</h1>
+            <div class="h-6 w-14 text-center bg-gray-200 font-light text-sm rounded-full">Electricity</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/emergency.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Brac Helpline</h1>
+            <p class="font-light text-sm">Brac</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">16445</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">NGO</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+        <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
+           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+            <img class="w-8 h-8" src="./assets/emergency.png" alt="">
+            <button class="heart w-8 h-8">❤️</button>
+           </nav>
+           <div class=" w-[350px] mx-auto py-4">
+            <h1  class="font-bold text-2xl">Bangladesh Railway Helpline </h1>
+            <p class="font-light text-sm">Bangladesh Railway</p>
+           </div>
+           <div class="w-[350px] mx-auto py-4" >
+            <h1 class="font-bold text-2xl">163</h1>
+            <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Travel</div>
+           </div>
+            <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
+          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+        </div>
+        </div>
+
+    </div>
+    <div class=" border-2 border-blue-400 w-[400px] min-h-36 bg-white">
+        <div class="lg:col-span-1 bg-white rounded-xl shadow p-4 flex flex-col">
+      <div class="flex justify-between items-center mb-3">
+        <h2 class="font-bold">Call History</h2>
+        <button onclick="clearHistory()" class=" w-32 h-12 flex items-center justify-center gap-3 rounded-full bg-green-500 text-white">Clear</button>
+      </div>
+      <ul id="callHistory" class="space-y-2 text-sm text-gray-600"></ul>
+    </div>
+    </div>
+</main>
+
 
 </body>
+
 </html>
+
+<button class=""><i class="fa-thin fa-copy"></i>hi</button>
+
+
+ 
+
+ 
+
+ 
+<i class="fa-thin fa-copy"></i>
+
