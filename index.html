@@ -24,23 +24,23 @@
             <h1 class="font-extrabold text-[#006747]">Emergency <br> Service</h1>
         </div>
         <div class="flex gap-0 mid:gap-4 mid:px-14 sm:justify-center sm:items-center px-4 mid: pl-8">
-            <div class="w-32 h-12  flex items-center justify-center gap-4 rounded-full bg-[#41ff6b1a]">
-                <span>0</span>
+            <div class="w-32 h-12  flex items-center justify-center gap-4 rounded-full bg-[#41ff6b1a] text-red-500">
+                <span id="heartCount">0</span>
                 <span><img class="h-8 w-8" src="./assets/heart.png" alt=""></span>
             </div>
             <div class="w-32 h-12  flex items-center justify-center gap-4 rounded-full bg-[#41ff6b1a]">
-                <span>100</span>
+                <span id="coinCount">100</span>
                 <span><img class="h-8 w-8" src="./assets/coin.png" alt=""></span>
             </div>
             <div class="  w-32 h-12 flex items-center justify-center gap-3 rounded-full bg-green-500 text-white">
-                <span>0</span>
+                <span id="copyCount">0</span>
                 <span>copy</span>
             </div>
         </div>
     </nav>
 
     <!-- green section -->
-     <div class="w-[90%] h-[100%] mx-auto mid:mx-none mid:h-60  bg-gradient-to-r from-[#013223] via-[#5c726b] to-[#013223] text-center justify-center mid:pt-10 sm:pt-o sm:w-[100%]">
+     <div class="w-[90%] h-[100%] mx-auto mid:mx-none mid:h-60  bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center justify-center mid:pt-10 sm:pt-o sm:w-[100%] py-5"> 
             <img class="w-24 h-24 mx-auto" src="./assets/logo-dark.png" alt="">
         <h1 class="font-extrabold text-[25px] text-white mt-3">Emergency Service Directory</h1>
         <p class="text-[17px] text-white py-2 w-[100%] md:mt-3">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
@@ -51,7 +51,7 @@
 <main class="w-[90%] min-h-[200px] max-w-[2000px] md:w-full mx-auto bg-[#41ff6b1a] flex-row md:flex pl-7 pt-8">
     <div class=" md:w-[1500px] min-h-36 grid grid-row-1  w-[90%] md:grid-cols-3 gap-8">
         <div class="w-[90%] md:w-[430px] md:h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class="w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/emergency.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -69,7 +69,7 @@
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/police.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -83,11 +83,11 @@
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
           <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Police Helpline Number" data-number="999" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/fire-service.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -105,7 +105,7 @@
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/ambulance.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -118,12 +118,12 @@
             <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Health</div>
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
-          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="copyNumber(this.dataset.number)" data-number="1994-999999" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Ambulance Service" data-number="1994-999999"   class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/emergency.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -136,12 +136,12 @@
             <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Help</div>
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
-          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="copyNumber(this.dataset.number)" data-number="109" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Women & Child Helpline" data-number="109" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/emergency.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -154,12 +154,12 @@
             <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">Govt.</div>
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
-          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="copyNumber(this.dataset.number)" data-number="106" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Anti-Corruption Helpline" data-number="106" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/emergency.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -172,12 +172,12 @@
             <div class="h-6 w-14 text-center bg-gray-200 font-light text-sm rounded-full">Electricity</div>
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
-          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="copyNumber(this.dataset.number)" data-number="16216" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Electricity Helpline" data-number="16216" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/emergency.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -190,12 +190,12 @@
             <div class="h-6 w-10 text-center bg-gray-200 font-light text-sm rounded-full">NGO</div>
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
-          <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="copyNumber(this.dataset.number)" data-number="16445" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Brac Helpline" data-number="16445" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
         <div class="w-[90%] md:w-[430px] h-[360px] bg-white pt-10 mx-auto mid:mx-none">
-           <nav class=" mid:w-[350px] mx-auto flex justify-between">
+           <nav class=" w-[350px] mx-auto flex justify-between">
             <img class="w-8 h-8" src="./assets/emergency.png" alt="">
             <button class="heart w-8 h-8">❤️</button>
            </nav>
@@ -209,7 +209,7 @@
            </div>
             <div class="flex justify-between mt-4 gap-2 w-[350px] mx-auto">
           <button onclick="copyNumber('999')" class="w-1/2 border rounded px-3 py-1 "><i class="fa-light fa-copy"></i> Copy</button>
-          <button onclick="makeCall('Fire Service Number','999')" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
+          <button onclick="makeCall(this.dataset.name, this.dataset.number)" data-name="Bangladesh Railway Helpline" data-number="163" class="w-1/2 bg-green-500 text-white px-3 py-1 rounded">Call</button>
         </div>
         </div>
 
